@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "oreprocessing", "oreprocessing\oreprocessing.csproj", "{B588F170-D9A8-43B5-8DA5-5A7EE855ABFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B588F170-D9A8-43B5-8DA5-5A7EE855ABFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B588F170-D9A8-43B5-8DA5-5A7EE855ABFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B588F170-D9A8-43B5-8DA5-5A7EE855ABFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B588F170-D9A8-43B5-8DA5-5A7EE855ABFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {cfc71bb5-a8ac-4dbb-b77b-c13f85340567}
+	EndGlobalSection
+EndGlobal

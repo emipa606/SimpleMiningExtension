@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Simple Mining Extension</name>
+  <author>WolfgangPolska/ Nero the Fam</author>
+  <url>https://forms.gle/F1yCNCUb2Em6U8iXA</url>
+  <supportedVersions>
+    <li>1.0</li>
+    <li>1.1</li>
+    <li>1.2</li>
+  </supportedVersions>
+  <description>Minor expansion to mining on rimworld.	Vanilla metals now have to be smelted from ores before they can be used.
+	Buffed deep drills and added medieval drilling options.
+	I have attached link to my google form about this mod. It wil help me enhance and shape my mod for it's users ( it means YOU!), so consider filling it.
+	Enjoy!	
+	</description>
+  <packageId>Yuno.SimpleOresTest</packageId>
+</ModMetaData>

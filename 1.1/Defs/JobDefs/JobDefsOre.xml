@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>MineAtPlatform</defName>
+    <driverClass>oreprocessing.JobDriver2ElectricBoogaloocs</driverClass>
+    <reportString>Mining at node.</reportString>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>SearchForResources</defName>
+    <driverClass>oreprocessing.JobDriverProspecting</driverClass>
+    <reportString>Searching for ore lumps.</reportString>
+    <suspendable>false</suspendable>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>

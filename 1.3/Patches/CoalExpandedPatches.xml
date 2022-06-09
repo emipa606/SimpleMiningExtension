@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Coal Expanded</li>
+      <li>Coal Expanded (Continued)</li>
+    </mods>
+    <success>Always</success>
+    <match Class="PatchOperationRemove">
+      <xpath>
+				Defs/ThingDef[defName="FueledKlin"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="CoalOre"] |
+				Defs/ThingDef[defName="BlastFurnace"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="CoalOre"] |
+				Defs/ThingDef[defName="FueledKlin"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="CharCoalOre"] |
+				Defs/ThingDef[defName="BlastFurnace"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="CharCoalOre"] 
+				</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Coal Expanded</li>
+      <li>Coal Expanded (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!-- Add PathchedModDefs -->
+        <!--  Refuelables-->
+        <li Class="PatchOperationAdd">
+          <order>Append</order>
+          <xpath>
+				Defs/ThingDef[defName = "FueledKlin"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs |
+				Defs/ThingDef[defName = "BlastFurnace"]/comps/li[contains(@Class,'CompProperties_Refuelable')]/fuelFilter/thingDefs 				
+				</xpath>
+          <value>
+            <li>Coal</li>
+            <li>Charcoal</li>
+          </value>
+        </li>
+        <!-- RecipeDefs -->
+        <li Class="PatchOperationAdd">
+          <order>Append</order>
+          <xpath>
+				Defs/RecipeDef[defName="SmeltIronOreChunk"]/ingredients/li[2]/filter/thingDefs |
+				Defs/RecipeDef[defName="SmeltIronOreChunkBulk"]/ingredients/li[2]/filter/thingDefs |
+				Defs/RecipeDef[defName="SmeltIronOreChunkPrimitive"]/ingredients/li[2]/filter/thingDefs |
+				Defs/RecipeDef[defName="SmeltIronOreChunk"]/fixedIngredientFilter/thingDefs |	
+				Defs/RecipeDef[defName="SmeltIronOreChunkBulk"]/fixedIngredientFilter/thingDefs |	
+				Defs/RecipeDef[defName="SmeltIronOreChunkPrimitive"]/fixedIngredientFilter/thingDefs 
+				</xpath>
+          <value>
+            <li>Coal</li>
+            <li>Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Coal Expanded</li>
+      <li>Coal Expanded (Continued)</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>
+				Defs/RecipeDef[defName="SmeltIronOreChunk"]/ingredients/li[2]/filter/thingDefs/li[text()="CoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunk"]/ingredients/li[2]/filter/thingDefs/li[text()="CharCoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunk"]/fixedIngredientFilter/thingDefs/li[text()="CoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunk"]/fixedIngredientFilter/thingDefs/li[text()="CharCoalOre"] |					
+				Defs/RecipeDef[defName="SmeltIronOreChunkBulk"]/ingredients/li[2]/filter/thingDefs/li[text()="CoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunkBulk"]/ingredients/li[2]/filter/thingDefs/li[text()="CharCoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunkBulk"]/fixedIngredientFilter/thingDefs/li[text()="CoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunkBulk"]/fixedIngredientFilter/thingDefs/li[text()="CharCoalOre"] |	
+				Defs/RecipeDef[defName="SmeltIronOreChunkPrimitive"]/ingredients/li[2]/filter/thingDefs/li[text()="CoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunkPrimitive"]/ingredients/li[2]/filter/thingDefs/li[text()="CharCoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunkPrimitive"]/fixedIngredientFilter/thingDefs/li[text()="CoalOre"] |
+				Defs/RecipeDef[defName="SmeltIronOreChunkPrimitive"]/fixedIngredientFilter/thingDefs/li[text()="CharCoalOre"] 
+			</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Coal Expanded</li>
+      <li>Coal Expanded (Continued)</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+      <xpath>
+				Defs/RecipeDef[defName = "ConvertWoodyToCharCoal"] |
+				Defs/ThingDef[defName = "MineableCoalOre"] |
+				Defs/ThingDef[defName = "CoalOre"] |
+				Defs/ThingDef[defName = "CharCoalOre"] |
+				Defs/ThingDef[defName = "CoalOrePoweredGenerator"] 
+				
+			</xpath>
+    </match>
+  </Operation>
+</Patch>
