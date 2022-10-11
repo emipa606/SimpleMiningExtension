@@ -116,11 +116,6 @@ public class PrimitiveOreRadarComp : ThingComp
     {
         var text = base.CompInspectStringExtra();
         var f = WorkDoneAlready / WorkToCompleteSearch;
-        if (!canSeeOverlay)
-        {
-            return $"{text}Progress to discovering ores: {f.ToStringPercent()}";
-        }
-
-        return $"{text}Prospecting finished";
+        return !canSeeOverlay ? "SME.Progress".Translate(text, f.ToStringPercent()) : "SME.Finished".Translate(text);
     }
 }

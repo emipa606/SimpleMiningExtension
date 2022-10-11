@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SME.Progress>{0}Progress to discovering ores: {1}</SME.Progress>
+  <SME.Finished>{0}Prospecting finished</SME.Finished>
+  <SME.NoNode>There is no node hooked</SME.NoNode>
+  <SME.OreLevel>Ore Level: {0}</SME.OreLevel>
+  <SME.Portion>{0}Progress to new portion: {1}</SME.Portion>
+  <SME.MineCollapse>Mine collapsed on colonist!</SME.MineCollapse>
+</LanguageData>

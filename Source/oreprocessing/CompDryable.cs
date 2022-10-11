@@ -91,12 +91,7 @@ public class CompDryable : ThingComp
 
     public bool ParentIsNotContained(IThingHolder holder)
     {
-        if (holder is Map)
-        {
-            return true;
-        }
-
-        return false;
+        return holder is Map;
     }
 
     private void TransformIntoSomething()
@@ -141,12 +136,7 @@ public class CompDryable : ThingComp
         }
 
         var terrainDef = parent.Map.terrainGrid.TerrainAt(parent.Position);
-        if (terrainDef.takeSplashes && terrainDef.extraDeteriorationFactor > 0f)
-        {
-            return true;
-        }
-
-        return false;
+        return terrainDef.takeSplashes && terrainDef.extraDeteriorationFactor > 0f;
     }
 
     public override void PreAbsorbStack(Thing otherStack, int count)
@@ -184,11 +174,6 @@ public class CompDryable : ThingComp
         }
 
         var num2 = PropsDry.TicksToDry - DryProgress;
-        if (num2 <= 0f)
-        {
-            return 0;
-        }
-
-        return Mathf.RoundToInt(num2 / num * humidity);
+        return num2 <= 0f ? 0 : Mathf.RoundToInt(num2 / num * humidity);
     }
 }

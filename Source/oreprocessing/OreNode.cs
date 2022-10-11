@@ -64,18 +64,7 @@ public class OreNode : ICellBoolGiver, IExposable
         }
     }
 
-    public bool HasResource
-    {
-        get
-        {
-            if (ResourceDef == null)
-            {
-                return false;
-            }
-
-            return true;
-        }
-    }
+    public bool HasResource => ResourceDef != null;
 
     public List<IntVec3> GetCells => Cells;
 

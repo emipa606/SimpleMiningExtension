@@ -45,10 +45,7 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
                     ResetTicksToPickHit();
                 }
 
-                if (pawn.skills != null)
-                {
-                    pawn.skills.Learn(SkillDefOf.Mining, 0.11f);
-                }
+                pawn.skills?.Learn(SkillDefOf.Mining, 0.11f);
 
                 ticksToPickHit--;
                 if (ticksToPickHit > 0)

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SME.Default>Default Settings</SME.Default>
+  <SME.WorkDuration>Work time duration, smaller it is the faster is the mining job: {0}</SME.WorkDuration>
+  <SME.MaxOres>Number of maximum ore nodes on map: {0}</SME.MaxOres>
+  <SME.Accidents>Mining accidents</SME.Accidents>
+  <SME.EnableAccidents>Enable mining accidents?</SME.EnableAccidents>
+  <SME.DaysBetweenAccidents>Minimum days between accidents: {0}</SME.DaysBetweenAccidents>
+  <SME.ModVersion>Installed mod-version: {0}</SME.ModVersion>
+</LanguageData>

@@ -176,16 +176,15 @@ public class CompMineShaft : ThingComp
     {
         var empty = base.CompInspectStringExtra();
         var f = WorkDone / WorkNeededForNextPortion;
-        empty = $"{empty}Progress to new portion: {f.ToStringPercent()}\n";
+        empty = "SME.Portion".Translate(empty, f.ToStringPercent());
         if (NodePointer == null)
         {
-            return empty + (NodePointer == null ? "There is no node hooked" : "");
+            return empty + (NodePointer == null ? "SME.NoNode".Translate() : "");
         }
 
-        empty += "Ore Level:";
-        empty += (int)NodePointer.OreAmountGet;
+        empty += "SME.OreLevel".Translate((int)NodePointer.OreAmountGet);
 
-        return empty + (NodePointer == null ? "There is no node hooked" : "");
+        return empty + (NodePointer == null ? "SME.NoNode".Translate() : "");
     }
 
     public bool CanMine()
@@ -290,7 +289,7 @@ public class CompMineShaft : ThingComp
                 new TargetInfo(parent.Position, parent.Map));
         }
 
-        Messages.Message("Mine collapsed on colonist!", new TargetInfo(parent.InteractionCell, parent.Map),
+        Messages.Message("SME.MineCollapse".Translate(), new TargetInfo(parent.InteractionCell, parent.Map),
             MessageTypeDefOf.NegativeEvent);
         SoundDefOf.Roof_Collapse.PlayOneShot(new TargetInfo(parent.Position, parent.Map));
     }
