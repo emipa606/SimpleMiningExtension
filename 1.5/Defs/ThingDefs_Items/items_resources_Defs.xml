@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <StuffCategoryDef>
+    <defName>BurnableCarbon</defName>
+    <label>Coal</label>
+  </StuffCategoryDef>
+  <StuffCategoryDef>
+    <defName>Ores</defName>
+    <label>Ores</label>
+  </StuffCategoryDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>CharCoalOre</defName>
+    <label>Charcoal</label>
+    <description>Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source.</description>
+    <graphicData>
+      <texPath>resources/charcoal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <categories>
+        <li>BurnableCarbon</li>
+      </categories>
+      <color>(61,53,53)</color>
+    </stuffProps>
+    <soundDrop>Stone_Drop</soundDrop>
+    <stackLimit>300</stackLimit>
+    <deepCommonality>0</deepCommonality>
+    <statBases>
+      <MarketValue>0.7</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>-10</Beauty>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>CoalOre</defName>
+    <label>Coal</label>
+    <description>Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source.</description>
+    <graphicData>
+      <texPath>resources/coal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <stuffProps>
+      <categories>
+        <li>BurnableCarbon</li>
+      </categories>
+      <color>(61,53,53)</color>
+    </stuffProps>
+    <soundDrop>Stone_Drop</soundDrop>
+    <stackLimit>300</stackLimit>
+    <deepCommonality>4</deepCommonality>
+    <deepCountPerPortion>50</deepCountPerPortion>
+    <deepLumpSizeRange>
+      <min>20</min>
+      <max>40</max>
+    </deepLumpSizeRange>
+    <statBases>
+      <MarketValue>0.7</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.5</Mass>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>-10</Beauty>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="RockBase">
+    <defName>MineableCoalOre</defName>
+    <label>Pressed Coal</label>
+    <description>The remains of some ancient vegetation. Pressed in rocks.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(114,92,83)</color>
+      <colorTwo>(0,0,0)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>CoalOre</mineableThing>
+      <mineableYield>50</mineableYield>
+      <mineableScatterCommonality>1</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>
+        <min>30</min>
+        <max>40</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>AdobeRaw</defName>
+    <label>raw adobe bricks</label>
+    <description>Simple bricks, made out of clay nad mud. They need to be dried in heat, pririor to being used.</description>
+    <graphicData>
+      <texPath>resources/AdobeRaw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Stone_Drop</soundInteract>
+    <soundDrop>Stone_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.01</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>1.0</Mass>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Beauty>-10</Beauty>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="OreProcessing.CompProperties_Dryable">
+        <defDriesTo>BlocksAdobe</defDriesTo>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>BlocksAdobe</defName>
+    <label>adobe bricks</label>
+    <description>Blocks of hardened clay with hay. Suitable as building material but very ugly.</description>
+    <graphicData>
+      <color>(144,108,63)</color>
+    </graphicData>
+    <statBases>
+      <Mass>0.85</Mass>
+      <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(144,108,63)</color>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>adobe</stuffAdjective>
+      <statFactors>
+        <Beauty>0.1</Beauty>
+        <MaxHitPoints>0.7</MaxHitPoints>
+        <WorkToBuild>2.0</WorkToBuild>
+        <WorkToMake>1.8</WorkToMake>
+        <Flammability>0.01</Flammability>
+      </statFactors>
+      <statOffsets>
+        <Beauty>-1</Beauty>
+      </statOffsets>
+    </stuffProps>
+  </ThingDef>
+  <TerrainDef ParentName="TileStoneBase">
+    <defName>TileAdobe</defName>
+    <label>adobe tile</label>
+    <color>(144,108,63)</color>
+    <statBases>
+      <WorkToBuild>900</WorkToBuild>
+      <Beauty>0</Beauty>
+    </statBases>
+    <costList>
+      <BlocksAdobe>4</BlocksAdobe>
+    </costList>
+  </TerrainDef>
+</Defs>

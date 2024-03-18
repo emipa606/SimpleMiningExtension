@@ -72,9 +72,9 @@ public class PrimitiveOreRadarComp : ThingComp
         }
 
         var random = new Random();
-        float num = 1 - (OreSettingsHelper.ModSettings.NodesOnMaps == 0
+        var num = 1 - (OreSettingsHelper.ModSettings.NodesOnMaps == 0
             ? 1
-            : MapComponent.GetNodes.Count / OreSettingsHelper.ModSettings.NodesOnMaps);
+            : (float)MapComponent.GetNodes.Count / OreSettingsHelper.ModSettings.NodesOnMaps);
         if ((float)random.NextDouble() <= num)
         {
             MapComponent.ScatterResourceAt(ReturnRandomCell());

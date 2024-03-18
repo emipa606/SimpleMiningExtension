@@ -34,7 +34,7 @@ public static class StaticConstructorClass
 
                     if (thingDef.recipes == null)
                     {
-                        thingDef.recipes = new List<RecipeDef>();
+                        thingDef.recipes = [];
                     }
 
                     if (!list.Contains(recipeDef))

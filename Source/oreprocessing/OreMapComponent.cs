@@ -6,17 +6,12 @@ using Verse;
 
 namespace oreprocessing;
 
-public class OreMapComponent : MapComponent
+public class OreMapComponent(Map map) : MapComponent(map)
 {
     public static readonly List<ThingDef> ResourceDefs =
         DefDatabase<ThingDef>.AllDefs.Where(def => def.deepCommonality > 0f).ToList();
 
-    private List<OreNode> Nodes = new List<OreNode>();
-
-    public OreMapComponent(Map map)
-        : base(map)
-    {
-    }
+    private List<OreNode> Nodes = [];
 
     public List<OreNode> GetNodes => Nodes;
 

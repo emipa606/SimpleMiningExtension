@@ -4,7 +4,7 @@ namespace oreprocessing;
 
 public class thingMined
 {
-    public int chance = 100;
+    public readonly int chance = 100;
 
     public string graphSuffix = null;
 

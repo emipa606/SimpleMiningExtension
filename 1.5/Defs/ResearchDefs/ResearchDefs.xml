@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ResearchTabDef>
+    <defName>OreProcess</defName>
+    <label>Ore processing and mining</label>
+  </ResearchTabDef>
+  <ResearchProjectDef>
+    <defName>MiningRes</defName>
+    <label>Mining</label>
+    <tab>OreProcess</tab>
+    <description>Build mines, which help you when you are short of metals.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Medieval</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.15</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>ElectricSmelting</defName>
+    <label>electric smelting</label>
+    <tab>OreProcess</tab>
+    <description>Build electric furnaces, to extract ore from slag.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>0.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>AdvancedSmelting</defName>
+    <label>advanced smelting</label>
+    <tab>OreProcess</tab>
+    <description>Build ore refinery, to aquire such metals as uranium or plasteel.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>1.00</researchViewX>
+    <researchViewY>0.80</researchViewY>
+    <prerequisites>
+      <li>Electricity</li>
+      <li>ElectricSmelting</li>
+      <li>BiofuelRefining</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

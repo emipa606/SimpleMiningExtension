@@ -15,8 +15,7 @@ public class SimpleOres : Mod
         modSettings = GetSettings<OreModSettings>();
         OreSettingsHelper.ModSettings = modSettings;
         currentVersion =
-            VersionFromManifest.GetVersionFromModMetaData(
-                ModLister.GetActiveModWithIdentifier("Mlie.SimpleMiningExtension"));
+            VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     public override void DoSettingsWindowContents(Rect inRect)
