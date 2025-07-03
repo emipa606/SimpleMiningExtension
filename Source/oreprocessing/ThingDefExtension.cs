@@ -5,7 +5,7 @@ namespace oreprocessing;
 
 public class ThingDefExtension : DefModExtension
 {
-    private static readonly ThingDefExtension defaultValues = new ThingDefExtension();
+    private static readonly ThingDefExtension defaultValues = new();
 
     public ThingFilter allowedProductFilter;
 
@@ -31,7 +31,7 @@ public class ThingDefExtension : DefModExtension
         }
 
         var nonWorkbenchDefNames = new List<string>();
-        var recipelessThingDefNames = new List<string>();
+        var recipeLessThingDefNames = new List<string>();
         foreach (var thing in inheritRecipesFrom)
         {
             if (!thing.IsWorkTable)
@@ -40,7 +40,7 @@ public class ThingDefExtension : DefModExtension
             }
             else if (thing.AllRecipes.NullOrEmpty())
             {
-                recipelessThingDefNames.Add(thing.defName);
+                recipeLessThingDefNames.Add(thing.defName);
             }
         }
 
@@ -50,10 +50,10 @@ public class ThingDefExtension : DefModExtension
                 $"the following ThingDefs in inheritRecipesFrom are not workbenches: {nonWorkbenchDefNames.ToCommaList()}";
         }
 
-        if (recipelessThingDefNames.Any())
+        if (recipeLessThingDefNames.Any())
         {
             yield return
-                $"the following workbenches in inheritRecipesFrom do not have any recipes: {recipelessThingDefNames.ToCommaList()}";
+                $"the following workbenches in inheritRecipesFrom do not have any recipes: {recipeLessThingDefNames.ToCommaList()}";
         }
     }
 

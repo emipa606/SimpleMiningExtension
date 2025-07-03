@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Blast Furnace -->
+  <BlastFurnace.label>Blast Furnace</BlastFurnace.label>
+  <!-- EN: A coal-fueled smelting furnace. It smelts faster than fueled klin and has better smelting efficiency. Allows for normal and bulk recipes for follwoing metals: gold, silver and steel. -->
+  <BlastFurnace.description>A coal-fueled smelting furnace. It smelts faster than fueled klin and has better smelting efficiency. Allows for normal and bulk recipes for follwoing metals: gold, silver and steel.</BlastFurnace.description>
+  <!-- EN: adobe-brick making spot -->
+  <BrickSpot.label>adobe-brick making spot</BrickSpot.label>
+  <!-- EN: A place for crafting simple bricks -->
+  <BrickSpot.description>A place for crafting simple bricks</BrickSpot.description>
+  <!-- EN: smelting klin -->
+  <FueledKlin.label>smelting klin</FueledKlin.label>
+  <!-- EN: A coal fueled kiln, smelts metals with low efficiency. Smelts variety of ores like: gold, silver and steel. -->
+  <FueledKlin.description>A coal fueled kiln, smelts metals with low efficiency. Smelts variety of ores like: gold, silver and steel.</FueledKlin.description>
+  <!-- EN: Mine -->
+  <MiningPlatform.label>Mine</MiningPlatform.label>
+  <!-- EN: A place for mining basic ores and coal. When no ores are present in it's radius stone chunks are mined. Use Prospecting Sieve to find and highlight new ore beds. -->
+  <MiningPlatform.description>A place for mining basic ores and coal. When no ores are present in it's radius stone chunks are mined. Use Prospecting Sieve to find and highlight new ore beds.</MiningPlatform.description>
+  <!-- EN: Prospecting Sieve -->
+  <OrePrimitiveRadar.label>Prospecting Sieve</OrePrimitiveRadar.label>
+  <!-- EN: Simple sieve, filtering soild for metal and rare stone traces. Colonists dig soil from designated site and after amassing enough it will highlight nearby ores.\n	(Mod Help: The Sieve have a chance of finding new ore lumps if some of the orginally spawned lumps where exhausted.) -->
+  <OrePrimitiveRadar.description>Simple sieve, filtering soild for metal and rare stone traces. Colonists dig soil from designated site and after amassing enough it will highlight nearby ores.
+	(Mod Help: The Sieve have a chance of finding new ore lumps if some of the orginally spawned lumps where exhausted.)</OrePrimitiveRadar.description>
+</LanguageData>

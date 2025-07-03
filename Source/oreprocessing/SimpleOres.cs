@@ -20,32 +20,32 @@ public class SimpleOres : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(inRect);
-        if (listing_Standard.ButtonText("SME.Default".Translate()))
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(inRect);
+        if (listingStandard.ButtonText("SME.Default".Translate()))
         {
             modSettings.Reset();
         }
 
-        listing_Standard.Label("SME.WorkDuration".Translate((int)modSettings.WorkDuration));
-        modSettings.WorkDuration = (int)Mathf.Round(listing_Standard.Slider(modSettings.WorkDuration, 1000f, 10000f));
-        listing_Standard.Label("SME.MaxOres".Translate(modSettings.NodesOnMaps));
-        listing_Standard.IntAdjuster(ref modSettings.NodesOnMaps, 1);
+        listingStandard.Label("SME.WorkDuration".Translate((int)modSettings.WorkDuration));
+        modSettings.WorkDuration = (int)Mathf.Round(listingStandard.Slider(modSettings.WorkDuration, 1000f, 10000f));
+        listingStandard.Label("SME.MaxOres".Translate(modSettings.NodesOnMaps));
+        listingStandard.IntAdjuster(ref modSettings.NodesOnMaps, 1);
 
-        listing_Standard.Label("SME.Accidents".Translate());
-        listing_Standard.CheckboxLabeled("SME.EnableAccidents".Translate(), ref modSettings.AccidentsEnabled);
-        listing_Standard.Label("SME.DaysBetweenAccidents".Translate(modSettings.AccidentIntervalDays));
+        listingStandard.Label("SME.Accidents".Translate());
+        listingStandard.CheckboxLabeled("SME.EnableAccidents".Translate(), ref modSettings.AccidentsEnabled);
+        listingStandard.Label("SME.DaysBetweenAccidents".Translate(modSettings.AccidentIntervalDays));
         modSettings.AccidentIntervalDays =
-            Mathf.RoundToInt(listing_Standard.Slider(modSettings.AccidentIntervalDays, 1f, 20f));
+            Mathf.RoundToInt(listingStandard.Slider(modSettings.AccidentIntervalDays, 1f, 20f));
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("SME.ModVersion".Translate(currentVersion));
+            listingStandard.Label("SME.ModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 
     public override string SettingsCategory()

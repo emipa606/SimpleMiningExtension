@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Miner's Hunger -->
+  <MinersHunger.label>Miner's Hunger</MinersHunger.label>
+  <!-- EN: Miners after work are very hungry! But their hands become clumsy and they cannt work with plants efficently. -->
+  <MinersHunger.description>Miners after work are very hungry! But their hands become clumsy and they cannt work with plants efficently.</MinersHunger.description>
+  <!-- EN: initial -->
+  <MinersHunger.stages.initial.label>initial</MinersHunger.stages.initial.label>
+  <!-- EN: moderate -->
+  <MinersHunger.stages.moderate.label>moderate</MinersHunger.stages.moderate.label>
+  <!-- EN: advanced -->
+  <MinersHunger.stages.advanced.label>advanced</MinersHunger.stages.advanced.label>
+</LanguageData>

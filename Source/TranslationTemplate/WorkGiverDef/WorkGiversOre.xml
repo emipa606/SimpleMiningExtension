@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: make bricks -->
+  <DoBillsBrickMaker.label>make bricks</DoBillsBrickMaker.label>
+  <!-- EN: Forming bricks at at -->
+  <DoBillsBrickMaker.gerund>Forming bricks at at</DoBillsBrickMaker.gerund>
+  <!-- EN: Form bricks -->
+  <DoBillsBrickMaker.verb>Form bricks</DoBillsBrickMaker.verb>
+  <!-- EN: smelt items -->
+  <DoBOreMill.label>smelt items</DoBOreMill.label>
+  <!-- EN: Refining at -->
+  <DoBOreMill.gerund>Refining at</DoBOreMill.gerund>
+  <!-- EN: Refine -->
+  <DoBOreMill.verb>Refine</DoBOreMill.verb>
+  <!-- EN: mine at node for resources -->
+  <Minig_MiningPlatformOre.label>mine at node for resources</Minig_MiningPlatformOre.label>
+  <!-- EN: mining at -->
+  <Minig_MiningPlatformOre.gerund>mining at</Minig_MiningPlatformOre.gerund>
+  <!-- EN: mine at -->
+  <Minig_MiningPlatformOre.verb>mine at</Minig_MiningPlatformOre.verb>
+  <!-- EN: filter soil for ore traces -->
+  <Minig_SearchForResources.label>filter soil for ore traces</Minig_SearchForResources.label>
+  <!-- EN: prospecting at -->
+  <Minig_SearchForResources.gerund>prospecting at</Minig_SearchForResources.gerund>
+  <!-- EN: prospect at -->
+  <Minig_SearchForResources.verb>prospect at</Minig_SearchForResources.verb>
+</LanguageData>

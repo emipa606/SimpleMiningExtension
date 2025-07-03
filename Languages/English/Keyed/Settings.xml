@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <SME.Default>Default Settings</SME.Default>
   <SME.WorkDuration>Work time duration, smaller it is the faster is the mining job: {0}</SME.WorkDuration>

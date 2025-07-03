@@ -20,7 +20,7 @@ public class JobDriverOreMine : JobDriver
         this.FailOn(delegate
         {
             var compMineShaft = job.targetA.Thing.TryGetComp<CompMineShaft>();
-            return !compMineShaft.CanMine();
+            return !CompMineShaft.CanMine();
         });
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
         var work = new Toil();

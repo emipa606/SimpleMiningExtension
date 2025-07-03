@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Mistake chance -->
+  <MiningMistakeChance.label>Mistake chance</MiningMistakeChance.label>
+  <!-- EN: The chance for pawn to make a mistake when mining. -->
+  <MiningMistakeChance.description>The chance for pawn to make a mistake when mining.</MiningMistakeChance.description>
+</LanguageData>

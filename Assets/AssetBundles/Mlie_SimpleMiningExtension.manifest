@@ -1,0 +1,59 @@
+ManifestFileVersion: 0
+CRC: 262025462
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b52a1123c6b1b6d69fc1698d50e05aa6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2612ac43db082a73502ee80f2eceb73f
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: b52a1123c6b1b6d69fc1698d50e05aa6
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Furnace/Furnace_east.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalSmithingFueled_north.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/FurnaceIndustrial/FurnaceIndustrial_north.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Smelter_Building_southm.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Icons/512.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/FurnaceIndustrial/FurnaceIndustrial_northm.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalSmithingFueled_east.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/orechunks/iron_chunk/ironore.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/AbadonedPlatform.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/MiningPlatform_m.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/resources/charcoal/charcoal.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/resources/coal/CoalOre.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Smelter_Building_north.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/orechunks/PigIron.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/FurnaceIndustrial/FurnaceIndustrial_south.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Smelter_Building_west.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/ProspectingSieve.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalStoveFueled_south.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/resources/AdobeRaw.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/orechunks/silver_chunk/silverore.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Smelter_Building_south.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Forge/Forge_east.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/MiningPlatform.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/FurnaceIndustrial/FurnaceIndustrial_east.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/AbadonedPlatform_m.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/orechunks/uranium_chunk/uraniumore.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/FurnaceIndustrial/FurnaceIndustrial_southm.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Icons/oreicon.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalStoveFueled_east.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalStoveFueled_north.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/orechunks/plasteel_chunk/plasteel.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/orechunks/gold_chunk/goldorea.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Smelter_Building_eastm.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalSmithingFueled_south.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Furnace/Furnace_north.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/CoalOreFiredGenerator.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Forge/Forge_south.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Forge/Forge_north.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/Furnace/Furnace_south.png
+- Assets/Data/Mlie.SimpleMiningExtension/Textures/Things/Buildings/FurnaceIndustrial/FurnaceIndustrial_eastm.png
+Dependencies: []

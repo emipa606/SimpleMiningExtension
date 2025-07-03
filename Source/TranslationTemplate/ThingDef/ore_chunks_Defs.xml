@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: gold ore -->
+  <ChunkGoldOre.label>gold ore</ChunkGoldOre.label>
+  <!-- EN: A chunk of gold containing ore. It's useless in its current form, however it can be smelted to aquire puryfied resource. -->
+  <ChunkGoldOre.description>A chunk of gold containing ore. It's useless in its current form, however it can be smelted to aquire puryfied resource.</ChunkGoldOre.description>
+  <!-- EN: iron ore -->
+  <ChunkIronOre.label>iron ore</ChunkIronOre.label>
+  <!-- EN: A piece of iron ore. It's useless in its current form, it can be smelted to aquire puryfied ore. -->
+  <ChunkIronOre.description>A piece of iron ore. It's useless in its current form, it can be smelted to aquire puryfied ore.</ChunkIronOre.description>
+  <!-- EN: plasteel ore -->
+  <ChunkPlasteelOre.label>plasteel ore</ChunkPlasteelOre.label>
+  <!-- EN: Not really an ore, the remains of ancient structure compressed by elements. They need to be purified and reshaped to be usable. -->
+  <ChunkPlasteelOre.description>Not really an ore, the remains of ancient structure compressed by elements. They need to be purified and reshaped to be usable.</ChunkPlasteelOre.description>
+  <!-- EN: silver ore -->
+  <ChunkSilverOre.label>silver ore</ChunkSilverOre.label>
+  <!-- EN: A chunk, containing silver ore. It's useless in its current form, it can be smelted to aquire resource . -->
+  <ChunkSilverOre.description>A chunk, containing silver ore. It's useless in its current form, it can be smelted to aquire resource .</ChunkSilverOre.description>
+  <!-- EN: uranium ore -->
+  <ChunkUraniumOre.label>uranium ore</ChunkUraniumOre.label>
+  <!-- EN: A chunk of uranium ore. It contains miniscule amount of resource, and it needs pulverized, refined with acid, then smelted into usable form. -->
+  <ChunkUraniumOre.description>A chunk of uranium ore. It contains miniscule amount of resource, and it needs pulverized, refined with acid, then smelted into usable form.</ChunkUraniumOre.description>
+</LanguageData>

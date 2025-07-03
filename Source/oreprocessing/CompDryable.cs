@@ -9,24 +9,24 @@ public class CompDryable : ThingComp
 {
     private float dryProgressInt;
 
-    public CompProperties_Dryable PropsDry => (CompProperties_Dryable)props;
+    private CompProperties_Dryable PropsDry => (CompProperties_Dryable)props;
 
     public float RotProgressPct => DryProgress / PropsDry.TicksToDry;
 
-    public float DryProgress
+    private float DryProgress
     {
         get => dryProgressInt;
         set => dryProgressInt = value;
     }
 
-    public int TicksUntilDryAtCurrentTempHumidity
+    private int TicksUntilDryAtCurrentTempHumidity
     {
         get
         {
             var humidity = (Find.WorldGrid[parent.Tile].rainfall / 1000f) + Find.WorldGrid[parent.Tile].swampiness;
             var ambientTemperature = parent.AmbientTemperature;
             ambientTemperature = Mathf.RoundToInt(ambientTemperature);
-            return TicksUntilDryAtTempHumidity(ambientTemperature, humidity);
+            return ticksUntilDryAtTempHumidity(ambientTemperature, humidity);
         }
     }
 
@@ -38,39 +38,37 @@ public class CompDryable : ThingComp
 
     public override void CompTick()
     {
-        Tick(1);
+        tick(1);
     }
 
     public override void CompTickRare()
     {
-        Tick(250);
+        tick(250);
     }
 
-    private static float DryRateAtTemperature(float temperature)
+    private static float dryRateAtTemperature(float temperature)
     {
-        if (temperature < 0f)
+        switch (temperature)
         {
-            return 0f;
+            case < 0f:
+                return 0f;
+            case >= 10f:
+                return temperature / 10f;
+            default:
+                return (temperature - 0f) / 10f;
         }
-
-        if (temperature >= 10f)
-        {
-            return temperature / 10f;
-        }
-
-        return (temperature - 0f) / 10f;
     }
 
-    private void Tick(int interval)
+    private void tick(int interval)
     {
-        if (!ParentIsNotContained(parent.ParentHolder))
+        if (!parentIsNotContained(parent.ParentHolder))
         {
             return;
         }
 
         var num = (Find.WorldGrid[parent.Tile].rainfall / 1000f) + Find.WorldGrid[parent.Tile].swampiness;
-        var num2 = DryRateAtTemperature(parent.AmbientTemperature);
-        if (ShouldGoWet())
+        var num2 = dryRateAtTemperature(parent.AmbientTemperature);
+        if (shouldGoWet())
         {
             DryProgress -= 6f * num2 * interval / num;
             if (DryProgress < 0f)
@@ -85,16 +83,16 @@ public class CompDryable : ThingComp
 
         if (DryProgress > PropsDry.TicksToDry)
         {
-            TransformIntoSomething();
+            transformIntoSomething();
         }
     }
 
-    public bool ParentIsNotContained(IThingHolder holder)
+    private static bool parentIsNotContained(IThingHolder holder)
     {
         return holder is Map;
     }
 
-    private void TransformIntoSomething()
+    private void transformIntoSomething()
     {
         var stackCount = parent.stackCount;
         var forbidden = false;
@@ -117,7 +115,7 @@ public class CompDryable : ThingComp
         }
     }
 
-    private bool ShouldGoWet()
+    private bool shouldGoWet()
     {
         if (parent.ParentHolder is Thing thing && thing.def.category == ThingCategory.Building &&
             thing.def.building.preventDeteriorationInside)
@@ -165,9 +163,9 @@ public class CompDryable : ThingComp
         return stringBuilder.ToString();
     }
 
-    public int TicksUntilDryAtTempHumidity(float temp, float humidity)
+    private int ticksUntilDryAtTempHumidity(float temp, float humidity)
     {
-        var num = DryRateAtTemperature(temp);
+        var num = dryRateAtTemperature(temp);
         if (num <= 0f)
         {
             return (int)DryProgress;

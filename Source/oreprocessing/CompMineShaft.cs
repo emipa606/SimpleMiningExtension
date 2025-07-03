@@ -10,9 +10,9 @@ namespace oreprocessing;
 
 public class CompMineShaft : ThingComp
 {
-    protected static readonly FloatRange DamageRandomFactorRange = new FloatRange(0.3f, 1.7f);
+    private static readonly FloatRange DamageRandomFactorRange = new(0.3f, 1.7f);
 
-    protected static readonly RangeInt DamageCountRange = new RangeInt(1, 4);
+    private static readonly RangeInt DamageCountRange = new(1, 4);
 
     private readonly int AverageDamage = 40;
 
@@ -54,9 +54,9 @@ public class CompMineShaft : ThingComp
         }
     }
 
-    private void HookToNode()
+    private void hookToNode()
     {
-        var num = 1000f;
+        const float num = 1000f;
         foreach (var getNode in parent.Map.GetComponent<OreMapComponent>().GetNodes)
         {
             foreach (var cell in getNode.Cells)
@@ -94,14 +94,14 @@ public class CompMineShaft : ThingComp
             Log.Message("Map still is null");
         }
 
-        HookToNode();
+        hookToNode();
         if (HookedNodeCell == IntVec3.Invalid || !(NodePointer.OreAmountGet <= 0f))
         {
             return;
         }
 
         parent.Map?.GetComponent<OreMapComponent>().RemoveNode(NodePointer);
-        HookToNode();
+        hookToNode();
     }
 
     public void MiningWorkDone(Pawn pawn)
@@ -119,7 +119,7 @@ public class CompMineShaft : ThingComp
             var statValue = pawn.GetStatValue(OreDefOf.MiningMistakeChance);
             if (Rand.Value < statValue)
             {
-                PawnMiningAccident(pawn);
+                pawnMiningAccident(pawn);
             }
         }
 
@@ -137,16 +137,16 @@ public class CompMineShaft : ThingComp
             }
 
             parent.Map.GetComponent<OreMapComponent>().RemoveNode(NodePointer);
-            HookToNode();
         }
         else
         {
-            TryProduceRock();
-            HookToNode();
+            tryProduceRock();
         }
+
+        hookToNode();
     }
 
-    private void TryProduceRock()
+    private void tryProduceRock()
     {
         var def = (from rock in Find.World.NaturalRockTypesIn(parent.Map.Tile)
             select rock.building.mineableThing).FirstOrDefault();
@@ -187,20 +187,20 @@ public class CompMineShaft : ThingComp
         return empty + (NodePointer == null ? "SME.NoNode".Translate() : "");
     }
 
-    public bool CanMine()
+    public static bool CanMine()
     {
         return true;
     }
 
-    private static void TryAddToCrushedThingsList(Thing t, List<Thing> outCrushedThings)
+    private static void tryAddToCrushedThingsList(Thing t, List<Thing> outCrushedThings)
     {
-        if (outCrushedThings != null && !outCrushedThings.Contains(t) && WorthMentioningInCrushLetter(t))
+        if (outCrushedThings != null && !outCrushedThings.Contains(t) && worthMentioningInCrushLetter(t))
         {
             outCrushedThings.Add(t);
         }
     }
 
-    private static bool WorthMentioningInCrushLetter(Thing t)
+    private static bool worthMentioningInCrushLetter(Thing t)
     {
         if (!t.def.destroyable)
         {
@@ -216,7 +216,7 @@ public class CompMineShaft : ThingComp
         };
     }
 
-    private void PawnMiningAccident(Pawn miner)
+    private void pawnMiningAccident(Pawn miner)
     {
         if (miner == null)
         {
@@ -229,31 +229,30 @@ public class CompMineShaft : ThingComp
         var num4 = num3 * 0.0015f;
         for (var i = 0; i < (float)num; i++)
         {
-            var dinfo = new DamageInfo(DamageDefOf.Blunt, num3, num4);
-            var damageResult = miner.TakeDamage(dinfo);
+            var damageResult = miner.TakeDamage(new DamageInfo(DamageDefOf.Blunt, num3, num4));
             if (i != 0)
             {
                 continue;
             }
 
-            var battleLogEntry_DamageTaken =
+            var battleLogEntryDamageTaken =
                 new BattleLogEntry_DamageTaken(miner, RulePackDefOf.DamageEvent_TrapSpike);
-            Find.BattleLog.Add(battleLogEntry_DamageTaken);
-            damageResult.AssociateWithLog(battleLogEntry_DamageTaken);
+            Find.BattleLog.Add(battleLogEntryDamageTaken);
+            damageResult.AssociateWithLog(battleLogEntryDamageTaken);
         }
 
         if (Rand.Value < 0.05)
         {
             var list = new List<Thing>();
-            TryAddToCrushedThingsList(miner, list);
+            tryAddToCrushedThingsList(miner, list);
             var crush = DamageDefOf.Crush;
-            var num5 = 99999f;
+            const float num5 = 99999f;
             num4 = 999f;
             var brain = miner.health.hediffSet.GetBrain();
-            var dinfo = new DamageInfo(crush, num5, num4, -1f, null, brain, null, DamageInfo.SourceCategory.Collapse);
-            var battleLogEntry_DamageTaken = new BattleLogEntry_DamageTaken(miner, RulePackDefOf.DamageEvent_Ceiling);
-            Find.BattleLog.Add(battleLogEntry_DamageTaken);
-            miner.TakeDamage(dinfo).AssociateWithLog(battleLogEntry_DamageTaken);
+            var battleLogEntryDamageTaken = new BattleLogEntry_DamageTaken(miner, RulePackDefOf.DamageEvent_Ceiling);
+            Find.BattleLog.Add(battleLogEntryDamageTaken);
+            miner.TakeDamage(new DamageInfo(crush, num5, num4, -1f, null, brain, null,
+                DamageInfo.SourceCategory.Collapse)).AssociateWithLog(battleLogEntryDamageTaken);
             if (!miner.Destroyed && miner.def.destroyable)
             {
                 miner.Kill(new DamageInfo(DamageDefOf.Crush, 99999f, 999f, -1f, null, null, null,

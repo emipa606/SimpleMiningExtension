@@ -5,7 +5,7 @@ namespace oreprocessing;
 
 public static class ProportionalWheelSelection
 {
-    public static readonly Random rnd = new Random();
+    private static readonly Random rnd = new();
 
     public static int SelectItem(List<thingMined> things)
     {

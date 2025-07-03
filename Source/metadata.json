@@ -2,5 +2,13 @@
   "Continued": true,
   "CanAdd": "2",
   "CanRemove": "2",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "LastXmlCleaning": "2025-07-03T21:33:54.4848216+02:00",
+  "SocialImageSet": true,
+  "Patches": true,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 47957.0,
+  "LinesOfXML": 61454.0,
+  "SearchTags": " smelting"
 }

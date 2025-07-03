@@ -6,7 +6,7 @@ namespace oreprocessing;
 
 public class CompProperties_Dryable : CompProperties
 {
-    public float daysToDry = 2f;
+    private readonly float daysToDry = 2f;
 
     public ThingDef defDriesTo;
 

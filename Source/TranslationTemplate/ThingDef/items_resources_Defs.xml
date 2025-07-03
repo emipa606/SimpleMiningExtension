@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: raw adobe bricks -->
+  <AdobeRaw.label>raw adobe bricks</AdobeRaw.label>
+  <!-- EN: Simple bricks, made out of clay nad mud. They need to be dried in heat, pririor to being used. -->
+  <AdobeRaw.description>Simple bricks, made out of clay nad mud. They need to be dried in heat, pririor to being used.</AdobeRaw.description>
+  <!-- EN: adobe bricks -->
+  <BlocksAdobe.label>adobe bricks</BlocksAdobe.label>
+  <!-- EN: Blocks of hardened clay with hay. Suitable as building material but very ugly. -->
+  <BlocksAdobe.description>Blocks of hardened clay with hay. Suitable as building material but very ugly.</BlocksAdobe.description>
+  <!-- EN: Charcoal -->
+  <CharCoalOre.label>Charcoal</CharCoalOre.label>
+  <!-- EN: Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source. -->
+  <CharCoalOre.description>Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source.</CharCoalOre.description>
+  <!-- EN: Coal -->
+  <CoalOre.label>Coal</CoalOre.label>
+  <!-- EN: Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source. -->
+  <CoalOre.description>Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source.</CoalOre.description>
+  <!-- EN: Pressed Coal -->
+  <MineableCoalOre.label>Pressed Coal</MineableCoalOre.label>
+  <!-- EN: The remains of some ancient vegetation. Pressed in rocks. -->
+  <MineableCoalOre.description>The remains of some ancient vegetation. Pressed in rocks.</MineableCoalOre.description>
+</LanguageData>

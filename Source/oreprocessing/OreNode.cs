@@ -27,7 +27,7 @@ public class OreNode : ICellBoolGiver, IExposable
 
         if (lumpCells == null || lumpCells.Count == 0)
         {
-            Log.Message("Lump cells erro");
+            Log.Message("Lump cells error");
         }
 
         ResourceDef = thingDef;
@@ -42,7 +42,7 @@ public class OreNode : ICellBoolGiver, IExposable
         }
 
         boolGrid = new BoolGrid(map);
-        AddToGrid();
+        addToGrid();
     }
 
     public OreNode()
@@ -55,10 +55,7 @@ public class OreNode : ICellBoolGiver, IExposable
     {
         get
         {
-            if (drawer == null)
-            {
-                drawer = new CellBoolDrawer(this, Size.x, Size.z);
-            }
+            drawer ??= new CellBoolDrawer(this, Size.x, Size.z);
 
             return drawer;
         }
@@ -109,11 +106,6 @@ public class OreNode : ICellBoolGiver, IExposable
         Scribe_Defs.Look(ref ResourceDef, "ResourceDef");
     }
 
-    public bool GetCellBool(IntVec3 c)
-    {
-        return boolGrid[c];
-    }
-
     public void MineChunk(float amount)
     {
         OreAmount -= amount;
@@ -136,7 +128,7 @@ public class OreNode : ICellBoolGiver, IExposable
         Drawer.CellBoolDrawerUpdate();
     }
 
-    public void AddToGrid()
+    private void addToGrid()
     {
         if (Cells == null)
         {

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: advanced smelting -->
+  <AdvancedSmelting.label>advanced smelting</AdvancedSmelting.label>
+  <!-- EN: Build ore refinery, to aquire such metals as uranium or plasteel. -->
+  <AdvancedSmelting.description>Build ore refinery, to aquire such metals as uranium or plasteel.</AdvancedSmelting.description>
+  <!-- EN: electric smelting -->
+  <ElectricSmelting.label>electric smelting</ElectricSmelting.label>
+  <!-- EN: Build electric furnaces, to extract ore from slag. -->
+  <ElectricSmelting.description>Build electric furnaces, to extract ore from slag.</ElectricSmelting.description>
+  <!-- EN: Mining -->
+  <MiningRes.label>Mining</MiningRes.label>
+  <!-- EN: Build mines, which help you when you are short of metals. -->
+  <MiningRes.description>Build mines, which help you when you are short of metals.</MiningRes.description>
+</LanguageData>

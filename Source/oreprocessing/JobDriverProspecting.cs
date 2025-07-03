@@ -15,11 +15,11 @@ public class JobDriverProspecting : JobDriver
     protected override IEnumerable<Toil> MakeNewToils()
     {
         _ = job.targetB.Cell;
-        var Comp = job.targetA.Thing.TryGetComp<PrimitiveOreRadarComp>();
+        var comp = job.targetA.Thing.TryGetComp<PrimitiveOreRadarComp>();
         this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
         this.FailOnBurningImmobile(TargetIndex.A);
         this.FailOnThingHavingDesignation(TargetIndex.A, DesignationDefOf.Deconstruct);
-        this.FailOn(() => Comp.canSeeOverlay);
+        this.FailOn(() => comp.canSeeOverlay);
         yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell);
         yield return Toils_General
             .WaitWith(TargetIndex.B, (int)(4000f / pawn.GetStatValue(StatDefOf.ResearchSpeed)), true)
@@ -27,11 +27,11 @@ public class JobDriverProspecting : JobDriver
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch);
         yield return Toils_General.WaitWith(TargetIndex.A, 500, true)
             .WithEffect(EffecterDefOf.ConstructDirt, TargetIndex.A);
-        yield return ProspectBuilding();
-        yield return SpawnFilth();
+        yield return prospectBuilding();
+        yield return spawnFilth();
     }
 
-    private Toil ProspectBuilding()
+    private Toil prospectBuilding()
     {
         return new Toil
         {
@@ -44,7 +44,7 @@ public class JobDriverProspecting : JobDriver
         };
     }
 
-    private Toil SpawnFilth()
+    private Toil spawnFilth()
     {
         return new Toil
         {

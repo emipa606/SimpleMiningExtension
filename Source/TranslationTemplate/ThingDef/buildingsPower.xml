@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Coal powered generator -->
+  <CoalOrePoweredGenerator.label>Coal powered generator</CoalOrePoweredGenerator.label>
+  <!-- EN: Produces power by consuming coal. Must be periodically refueled by hand. -->
+  <CoalOrePoweredGenerator.description>Produces power by consuming coal. Must be periodically refueled by hand.</CoalOrePoweredGenerator.description>
+</LanguageData>

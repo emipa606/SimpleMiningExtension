@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Mining at node. -->
+  <MineAtPlatform.reportString>Mining at node.</MineAtPlatform.reportString>
+  <!-- EN: Searching for ore lumps. -->
+  <SearchForResources.reportString>Searching for ore lumps.</SearchForResources.reportString>
+</LanguageData>

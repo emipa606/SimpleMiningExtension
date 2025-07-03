@@ -24,17 +24,17 @@ public class PrimitiveOreRadarComp : ThingComp
 
     private OreMapComponent MapComponent => parent.Map.GetComponent<OreMapComponent>();
 
-    public IEnumerable<IntVec3> GetCellsInMiningRange()
+    private IEnumerable<IntVec3> getCellsInMiningRange()
     {
         return GenRadial.RadialCellsAround(parent.Position, ProspectRange, true);
     }
 
-    public IntVec3 ReturnRandomCell()
+    private IntVec3 returnRandomCell()
     {
-        var list = GetCellsInMiningRange().ToList().InRandomOrder();
+        var list = getCellsInMiningRange().ToList().InRandomOrder();
         foreach (var intVec3 in list)
         {
-            if (MapComponent.CanScatterAt(intVec3, parent.Map))
+            if (OreMapComponent.CanScatterAt(intVec3, parent.Map))
             {
                 return intVec3;
             }
@@ -45,7 +45,7 @@ public class PrimitiveOreRadarComp : ThingComp
 
     public IntVec3 ReturnValidCellToDig(Pawn pawn)
     {
-        var list = GetCellsInMiningRange().ToList().InRandomOrder();
+        var list = getCellsInMiningRange().ToList().InRandomOrder();
         foreach (var intVec3 in list)
         {
             if (pawn.CanReserveAndReach(intVec3, PathEndMode.OnCell, Danger.Deadly))
@@ -77,7 +77,7 @@ public class PrimitiveOreRadarComp : ThingComp
             : (float)MapComponent.GetNodes.Count / OreSettingsHelper.ModSettings.NodesOnMaps);
         if ((float)random.NextDouble() <= num)
         {
-            MapComponent.ScatterResourceAt(ReturnRandomCell());
+            MapComponent.ScatterResourceAt(returnRandomCell());
         }
     }
 

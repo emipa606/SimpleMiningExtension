@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Digging and drilling at mining platform.(Worktype added by ore processing). -->
+  <MiningOreNode.description>Digging and drilling at mining platform.(Worktype added by ore processing).</MiningOreNode.description>
+  <!-- EN: mining -->
+  <MiningOreNode.gerundLabel>mining</MiningOreNode.gerundLabel>
+  <!-- EN: Excavate -->
+  <MiningOreNode.labelShort>Excavate</MiningOreNode.labelShort>
+  <!-- EN: Miner -->
+  <MiningOreNode.pawnLabel>Miner</MiningOreNode.pawnLabel>
+  <!-- EN: Mine Quarry -->
+  <MiningOreNode.verb>Mine Quarry</MiningOreNode.verb>
+  <!-- EN: Sieving soil in search of ore lumps. -->
+  <WorkingOnSice.description>Sieving soil in search of ore lumps.</WorkingOnSice.description>
+  <!-- EN: sieving -->
+  <WorkingOnSice.gerundLabel>sieving</WorkingOnSice.gerundLabel>
+  <!-- EN: Sieve -->
+  <WorkingOnSice.labelShort>Sieve</WorkingOnSice.labelShort>
+  <!-- EN: Researcher -->
+  <WorkingOnSice.pawnLabel>Researcher</WorkingOnSice.pawnLabel>
+  <!-- EN: Sieve Soil -->
+  <WorkingOnSice.verb>Sieve Soil</WorkingOnSice.verb>
+</LanguageData>

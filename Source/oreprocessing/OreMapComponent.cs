@@ -8,7 +8,7 @@ namespace oreprocessing;
 
 public class OreMapComponent(Map map) : MapComponent(map)
 {
-    public static readonly List<ThingDef> ResourceDefs =
+    private static readonly List<ThingDef> ResourceDefs =
         DefDatabase<ThingDef>.AllDefs.Where(def => def.deepCommonality > 0f).ToList();
 
     private List<OreNode> Nodes = [];
@@ -33,7 +33,7 @@ public class OreMapComponent(Map map) : MapComponent(map)
         Nodes.Remove(node);
     }
 
-    public bool CanScatterAt(IntVec3 pos, Map localMap)
+    public static bool CanScatterAt(IntVec3 pos, Map localMap)
     {
         var ind = CellIndicesUtility.CellToIndex(pos, localMap.Size.x);
         var terrainDef = localMap.terrainGrid.TerrainAt(ind);
@@ -47,7 +47,6 @@ public class OreMapComponent(Map map) : MapComponent(map)
         var thingDef = ResourceDefs.RandomElementByWeight(def => def.deepCommonality);
         var numCells = Mathf.CeilToInt(thingDef.deepLumpSizeRange.RandomInRange);
         var list = new List<IntVec3>();
-        Log.Message($"ThingDef {thingDef.label}");
         foreach (var item in GridShapeMaker.IrregularLump(c, map, numCells))
         {
             if (!item.InNoBuildEdgeArea(map))
@@ -69,12 +68,9 @@ public class OreMapComponent(Map map) : MapComponent(map)
                 continue;
             }
 
-            Log.Message($"Cell to place{result}");
             ScatterResourceAt(result);
             num--;
         }
-
-        Log.Message($"Nodes generated:{Nodes.Count}");
     }
 
     public override void FinalizeInit()
@@ -100,13 +96,5 @@ public class OreMapComponent(Map map) : MapComponent(map)
     {
         Scribe_Collections.Look(ref Nodes, "ResourceNodesOnMap", LookMode.Deep);
         base.ExposeData();
-    }
-
-    public void MarkForDraw()
-    {
-        foreach (var node in Nodes)
-        {
-            node.MarkForDraw();
-        }
     }
 }

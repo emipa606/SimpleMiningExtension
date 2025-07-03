@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Convert wood to charcoal -->
+  <ConvertWoodyToCharCoal.label>Convert wood to charcoal</ConvertWoodyToCharCoal.label>
+  <!-- EN: Make charcoal. -->
+  <ConvertWoodyToCharCoal.description>Make charcoal.</ConvertWoodyToCharCoal.description>
+  <!-- EN: Smelting Logs -->
+  <ConvertWoodyToCharCoal.jobString>Smelting Logs</ConvertWoodyToCharCoal.jobString>
+  <!-- EN: make raw adobe bricks -->
+  <MakeRawAdobe.label>make raw adobe bricks</MakeRawAdobe.label>
+  <!-- EN: Use hay nad wet clay to acquire cheap brick material. -->
+  <MakeRawAdobe.description>Use hay nad wet clay to acquire cheap brick material.</MakeRawAdobe.description>
+  <!-- EN: Creating bricks from pulp. -->
+  <MakeRawAdobe.jobString>Creating bricks from pulp.</MakeRawAdobe.jobString>
+  <!-- EN: refine gold ore -->
+  <SmeltGoldOreChunk.label>refine gold ore</SmeltGoldOreChunk.label>
+  <!-- EN: With use of compounds and heat refine gold chunk into useful metal -->
+  <SmeltGoldOreChunk.description>With use of compounds and heat refine gold chunk into useful metal</SmeltGoldOreChunk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltGoldOreChunk.jobString>Smelting metal from chunk.</SmeltGoldOreChunk.jobString>
+  <!-- EN: refine gold ore in bulk -->
+  <SmeltGoldOreChunkBulk.label>refine gold ore in bulk</SmeltGoldOreChunkBulk.label>
+  <!-- EN: With use of compounds and heat refine gold chunk into useful metal. Industrial quantities! -->
+  <SmeltGoldOreChunkBulk.description>With use of compounds and heat refine gold chunk into useful metal. Industrial quantities!</SmeltGoldOreChunkBulk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltGoldOreChunkBulk.jobString>Smelting metal from chunk.</SmeltGoldOreChunkBulk.jobString>
+  <!-- EN: refine gold ore -->
+  <SmeltGoldOreChunkPrimitive.label>refine gold ore</SmeltGoldOreChunkPrimitive.label>
+  <!-- EN: With use of compounds and heat refine gold chunk into useful metal -->
+  <SmeltGoldOreChunkPrimitive.description>With use of compounds and heat refine gold chunk into useful metal</SmeltGoldOreChunkPrimitive.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltGoldOreChunkPrimitive.jobString>Smelting metal from chunk.</SmeltGoldOreChunkPrimitive.jobString>
+  <!-- EN: refine steel ore -->
+  <SmeltIronOreChunk.label>refine steel ore</SmeltIronOreChunk.label>
+  <!-- EN: With use of compounds and heat refine iron chunk into useful metal -->
+  <SmeltIronOreChunk.description>With use of compounds and heat refine iron chunk into useful metal</SmeltIronOreChunk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltIronOreChunk.jobString>Smelting metal from chunk.</SmeltIronOreChunk.jobString>
+  <!-- EN: refine steel ore in bulk -->
+  <SmeltIronOreChunkBulk.label>refine steel ore in bulk</SmeltIronOreChunkBulk.label>
+  <!-- EN: With use of compounds and heat refine iron chunk into useful metal. Industrial quantities! -->
+  <SmeltIronOreChunkBulk.description>With use of compounds and heat refine iron chunk into useful metal. Industrial quantities!</SmeltIronOreChunkBulk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltIronOreChunkBulk.jobString>Smelting metal from chunk.</SmeltIronOreChunkBulk.jobString>
+  <!-- EN: refine steel ore -->
+  <SmeltIronOreChunkPrimitive.label>refine steel ore</SmeltIronOreChunkPrimitive.label>
+  <!-- EN: With use of compounds and heat refine iron chunk into useful metal. -->
+  <SmeltIronOreChunkPrimitive.description>With use of compounds and heat refine iron chunk into useful metal.</SmeltIronOreChunkPrimitive.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltIronOreChunkPrimitive.jobString>Smelting metal from chunk.</SmeltIronOreChunkPrimitive.jobString>
+  <!-- EN: refine plasteel -->
+  <SmeltPlasteelOreChunk.label>refine plasteel</SmeltPlasteelOreChunk.label>
+  <!-- EN: Refine plasteel, by  melting plasteel crystals with steel -->
+  <SmeltPlasteelOreChunk.description>Refine plasteel, by  melting plasteel crystals with steel</SmeltPlasteelOreChunk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltPlasteelOreChunk.jobString>Smelting metal from chunk.</SmeltPlasteelOreChunk.jobString>
+  <!-- EN: refine plasteel ore in bulk -->
+  <SmeltPlasteelOreChunkBulk.label>refine plasteel ore in bulk</SmeltPlasteelOreChunkBulk.label>
+  <!-- EN: With use of compounds and heat refine silver chunk into useful metal. Industrial quantities! -->
+  <SmeltPlasteelOreChunkBulk.description>With use of compounds and heat refine silver chunk into useful metal. Industrial quantities!</SmeltPlasteelOreChunkBulk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltPlasteelOreChunkBulk.jobString>Smelting metal from chunk.</SmeltPlasteelOreChunkBulk.jobString>
+  <!-- EN: refine silver ore -->
+  <SmeltSilverOreChunk.label>refine silver ore</SmeltSilverOreChunk.label>
+  <!-- EN: With use of compounds and heat refine silver chunk into useful metal -->
+  <SmeltSilverOreChunk.description>With use of compounds and heat refine silver chunk into useful metal</SmeltSilverOreChunk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltSilverOreChunk.jobString>Smelting metal from chunk.</SmeltSilverOreChunk.jobString>
+  <!-- EN: refine silver ore in bulk -->
+  <SmeltSilverOreChunkBulk.label>refine silver ore in bulk</SmeltSilverOreChunkBulk.label>
+  <!-- EN: With use of compounds and heat refine silver chunk into useful metal. Industrial quantities! -->
+  <SmeltSilverOreChunkBulk.description>With use of compounds and heat refine silver chunk into useful metal. Industrial quantities!</SmeltSilverOreChunkBulk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltSilverOreChunkBulk.jobString>Smelting metal from chunk.</SmeltSilverOreChunkBulk.jobString>
+  <!-- EN: refine silver ore -->
+  <SmeltSilverOreChunkPrimitive.label>refine silver ore</SmeltSilverOreChunkPrimitive.label>
+  <!-- EN: With use of compounds and heat refine silver chunk into useful metal. -->
+  <SmeltSilverOreChunkPrimitive.description>With use of compounds and heat refine silver chunk into useful metal.</SmeltSilverOreChunkPrimitive.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltSilverOreChunkPrimitive.jobString>Smelting metal from chunk.</SmeltSilverOreChunkPrimitive.jobString>
+  <!-- EN: refine uranium -->
+  <SmeltUraniumOreChunk.label>refine uranium</SmeltUraniumOreChunk.label>
+  <!-- EN: With use of compounds and heat refine uranium chunk into useful metal -->
+  <SmeltUraniumOreChunk.description>With use of compounds and heat refine uranium chunk into useful metal</SmeltUraniumOreChunk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltUraniumOreChunk.jobString>Smelting metal from chunk.</SmeltUraniumOreChunk.jobString>
+  <!-- EN: refine uranium ore in bulk -->
+  <SmeltUraniumOreChunkBulk.label>refine uranium ore in bulk</SmeltUraniumOreChunkBulk.label>
+  <!-- EN: With use of compounds and heat refine uranium chunk into useful metal. Industrial quantities! -->
+  <SmeltUraniumOreChunkBulk.description>With use of compounds and heat refine uranium chunk into useful metal. Industrial quantities!</SmeltUraniumOreChunkBulk.description>
+  <!-- EN: Smelting metal from chunk. -->
+  <SmeltUraniumOreChunkBulk.jobString>Smelting metal from chunk.</SmeltUraniumOreChunkBulk.jobString>
+</LanguageData>

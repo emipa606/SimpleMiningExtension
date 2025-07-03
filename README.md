@@ -1,4 +1,4 @@
-# SimpleMiningExtension
+# [Simple Mining Extension (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2819002574)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -6,7 +6,6 @@ Update of WolfgangPolska/ Nero the Fams mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2000091253
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
@@ -19,8 +18,8 @@ The adobe bricks will dry on their own by just laying aroud. And the drying spee
 https://ludeon.com/forums/index.php?topic=50374.msg470722#msg470722
 
 **SUPPORTED MODS**
--https://steamcommunity.com/sharedfiles/filedetails/?id=1924942266]WD Fueled Heaters- Fueled heater will accept coal.
--https://steamcommunity.com/sharedfiles/filedetails/?id=1874344070] Coal Expanded - If installed, SME will use coal from this mod and SME's coal items will be removed from the game.
+-[WD Fueled Heaters](https://steamcommunity.com/sharedfiles/filedetails/?id=1924942266)- Fueled heater will accept coal.
+-[ Coal Expanded ](https://steamcommunity.com/sharedfiles/filedetails/?id=1874344070)- If installed, SME will use coal from this mod and SME's coal items will be removed from the game.
 
 ** BUILDINGS**
 - Coal generator - Simillar in stats to chemfuel generator
@@ -67,13 +66,12 @@ https://forms.gle/yXDHxW37d2kotUru6
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2819002574]![Image](https://img.shields.io/github/v/release/emipa606/SimpleMiningExtension?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[![Image](https://img.shields.io/github/v/release/emipa606/SimpleMiningExtension?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2819002574) | tags:  smelting

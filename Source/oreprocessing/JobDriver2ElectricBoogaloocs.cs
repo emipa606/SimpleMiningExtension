@@ -25,14 +25,14 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
         this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
         this.FailOnBurningImmobile(TargetIndex.A);
         this.FailOnThingHavingDesignation(TargetIndex.A, DesignationDefOf.Deconstruct);
-        this.FailOn(() => !compMiningPlatform.CanMine());
+        this.FailOn(() => !CompMineShaft.CanMine());
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
-        yield return MineStuffFromMine();
-        yield return MineShaftYieldStuff();
-        yield return ApplyHeDiff();
+        yield return mineStuffFromMine();
+        yield return mineShaftYieldStuff();
+        yield return applyHeDiff();
     }
 
-    private Toil MineStuffFromMine()
+    private Toil mineStuffFromMine()
     {
         return new Toil
         {
@@ -42,7 +42,7 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
                 building.GetComp<CompMineShaft>();
                 if (ticksToPickHit < -100)
                 {
-                    ResetTicksToPickHit();
+                    resetTicksToPickHit();
                 }
 
                 pawn.skills?.Learn(SkillDefOf.Mining, 0.11f);
@@ -53,13 +53,10 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
                     return;
                 }
 
-                if (effecter == null)
-                {
-                    effecter = EffecterDefOf.Mine.Spawn();
-                }
+                effecter ??= EffecterDefOf.Mine.Spawn();
 
                 effecter.Trigger(pawn, building);
-                ResetTicksToPickHit();
+                resetTicksToPickHit();
             },
             defaultDuration =
                 (int)Mathf.Clamp(OreSettingsHelper.ModSettings.WorkDuration / pawn.GetStatValue(StatDefOf.MiningSpeed),
@@ -69,7 +66,7 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
         }.WithProgressBarToilDelay(TargetIndex.B);
     }
 
-    private Toil MineShaftYieldStuff()
+    private Toil mineShaftYieldStuff()
     {
         return new Toil
         {
@@ -82,7 +79,7 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
         };
     }
 
-    private Toil ApplyHeDiff()
+    private Toil applyHeDiff()
     {
         return new Toil
         {
@@ -103,7 +100,7 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
         };
     }
 
-    private void ResetTicksToPickHit()
+    private void resetTicksToPickHit()
     {
         var num = pawn.GetStatValue(StatDefOf.MiningSpeed);
         if (num < 0.6f && pawn.Faction != Faction.OfPlayer)

@@ -60,7 +60,7 @@ public class WorkGiver_MiningOperation : WorkGiver_Scanner
         }
 
         var compMineShaft = building.TryGetComp<CompMineShaft>();
-        return compMineShaft.CanMine() &&
+        return CompMineShaft.CanMine() &&
                building.Map.designationManager.DesignationOn(building, DesignationDefOf.Deconstruct) == null &&
                !building.IsBurning();
     }
