@@ -4,7 +4,7 @@ using Verse;
 namespace oreprocessing;
 
 [DefOf]
-public class OreDefOf
+public static class OreDefOf
 {
     public static ThingDef MiningPlatform;
 

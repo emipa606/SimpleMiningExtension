@@ -21,7 +21,7 @@ internal class JobDriver2ElectricBoogaloocs : JobDriver
 
     protected override IEnumerable<Toil> MakeNewToils()
     {
-        var compMiningPlatform = job.targetA.Thing.TryGetComp<CompMineShaft>();
+        job.targetA.Thing.TryGetComp<CompMineShaft>();
         this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
         this.FailOnBurningImmobile(TargetIndex.A);
         this.FailOnThingHavingDesignation(TargetIndex.A, DesignationDefOf.Deconstruct);

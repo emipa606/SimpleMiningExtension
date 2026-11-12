@@ -16,22 +16,22 @@ public class CompMineShaft : ThingComp
 
     private readonly int AverageDamage = 40;
 
-    private readonly float baseWorkPerCycle = 1500f;
-
     private readonly int MiningRadius = 8;
 
-    private readonly int ticksInDay = 60000;
-
     private readonly float WorkNeededForNextPortion = 2000f;
+
+    private readonly float baseWorkPerCycle = 1500f;
+
+    private readonly int ticksInDay = 60000;
 
     private bool FirstSpawn;
     private IntVec3 HookedNodeCell = IntVec3.Invalid;
 
+    private float WorkDone;
+
     private int lastPwnMishlapTick = -99999;
 
     private int lastUsedTick = -99999;
-
-    private float WorkDone;
 
     public CompProperties_MineShaft PropsMine => (CompProperties_MineShaft)props;
 
@@ -39,18 +39,8 @@ public class CompMineShaft : ThingComp
     {
         get
         {
-            foreach (var getNode in parent.Map.GetComponent<OreMapComponent>().GetNodes)
-            {
-                foreach (var cell in getNode.Cells)
-                {
-                    if (cell == HookedNodeCell)
-                    {
-                        return getNode;
-                    }
-                }
-            }
-
-            return null;
+            return parent.Map.GetComponent<OreMapComponent>().GetNodes
+                .FirstOrDefault(node => node.Cells.Any(cell => cell == HookedNodeCell));
         }
     }
 

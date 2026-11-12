@@ -32,10 +32,7 @@ public static class StaticConstructorClass
                         continue;
                     }
 
-                    if (thingDef.recipes == null)
-                    {
-                        thingDef.recipes = [];
-                    }
+                    thingDef.recipes ??= [];
 
                     if (!list.Contains(recipeDef))
                     {

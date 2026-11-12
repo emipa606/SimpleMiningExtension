@@ -3,4 +3,47 @@
     <BuildType Name="Release" />
   </Configurations>
   <Project Path="oreprocessing/oreprocessing.csproj" />
+  <Folder Name="/.github/">
+    <File Path="../.github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/StatDefs/">
+    <File Path="../1.7/Defs/StatDefs/StatDefs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/JobDefs/">
+    <File Path="../1.7/Defs/JobDefs/JobDefsOre.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Patches/">
+    <File Path="../1.7/Patches/CoalExpandedPatches.xml" />
+    <File Path="../1.7/Patches/orepatches.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/HeDiff_Defs/">
+    <File Path="../1.7/Defs/HeDiff_Defs/HeDiffDefs.xml" />
+  </Folder>
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/InGame.xml" />
+    <File Path="../Languages/English/Keyed/Settings.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Items/">
+    <File Path="../1.7/Defs/ThingDefs_Items/items_resources_Defs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ResearchDefs/">
+    <File Path="../1.7/Defs/ResearchDefs/ResearchDefs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Misc/">
+    <File Path="../1.7/Defs/ThingDefs_Misc/ore_chunks_Defs.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/WorkGivers/">
+    <File Path="../1.7/Defs/WorkGivers/WorkGiversOre.xml" />
+    <File Path="../1.7/Defs/WorkGivers/WorkTypesOre.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Recipes/">
+    <File Path="../1.7/Defs/ThingDefs_Recipes/recipes_smelter.xml" />
+  </Folder>
+  <Folder Name="/XML/1.7/Defs/ThingDefs_Buildings/">
+    <File Path="../1.7/Defs/ThingDefs_Buildings/buildingsPower.xml" />
+    <File Path="../1.7/Defs/ThingDefs_Buildings/workshopsore.xml" />
+  </Folder>
 </Solution>

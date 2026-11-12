@@ -8,6 +8,8 @@
   <BlocksAdobe.label>adobe bricks</BlocksAdobe.label>
   <!-- EN: Blocks of hardened clay with hay. Suitable as building material but very ugly. -->
   <BlocksAdobe.description>Blocks of hardened clay with hay. Suitable as building material but very ugly.</BlocksAdobe.description>
+  <!-- EN: adobe -->
+  <BlocksAdobe.stuffProps.stuffAdjective>adobe</BlocksAdobe.stuffProps.stuffAdjective>
   <!-- EN: Charcoal -->
   <CharCoalOre.label>Charcoal</CharCoalOre.label>
   <!-- EN: Being one of the most common elements on planets with carbon-based lifeforms, coal has many desirable properites, such as serving as good fuel source. -->

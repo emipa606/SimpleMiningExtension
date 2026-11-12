@@ -16,9 +16,9 @@ public class PrimitiveOreRadarComp : ThingComp
 
     private readonly float WorkToCompleteSearch = 10000f;
 
-    public bool canSeeOverlay;
-
     private float WorkDoneAlready;
+
+    public bool canSeeOverlay;
 
     private PrimitiveOreRadarCompProps PropsRadar => (PrimitiveOreRadarCompProps)props;
 
@@ -32,12 +32,9 @@ public class PrimitiveOreRadarComp : ThingComp
     private IntVec3 returnRandomCell()
     {
         var list = getCellsInMiningRange().ToList().InRandomOrder();
-        foreach (var intVec3 in list)
+        foreach (var intVec3 in list.Where(cell => OreMapComponent.CanScatterAt(cell, parent.Map)))
         {
-            if (OreMapComponent.CanScatterAt(intVec3, parent.Map))
-            {
-                return intVec3;
-            }
+            return intVec3;
         }
 
         return IntVec3.Invalid;
@@ -46,12 +43,10 @@ public class PrimitiveOreRadarComp : ThingComp
     public IntVec3 ReturnValidCellToDig(Pawn pawn)
     {
         var list = getCellsInMiningRange().ToList().InRandomOrder();
-        foreach (var intVec3 in list)
+        foreach (var intVec3 in list.Where(intVec3 =>
+                     pawn.CanReserveAndReach(intVec3, PathEndMode.OnCell, Danger.Deadly)))
         {
-            if (pawn.CanReserveAndReach(intVec3, PathEndMode.OnCell, Danger.Deadly))
-            {
-                return intVec3;
-            }
+            return intVec3;
         }
 
         return IntVec3.Invalid;

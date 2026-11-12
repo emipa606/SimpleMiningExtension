@@ -19,7 +19,7 @@ public class JobDriverOreMine : JobDriver
         this.FailOnThingHavingDesignation(TargetIndex.A, DesignationDefOf.Deconstruct);
         this.FailOn(delegate
         {
-            var compMineShaft = job.targetA.Thing.TryGetComp<CompMineShaft>();
+            job.targetA.Thing.TryGetComp<CompMineShaft>();
             return !CompMineShaft.CanMine();
         });
         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);

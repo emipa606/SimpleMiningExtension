@@ -6,17 +6,14 @@ namespace oreprocessing;
 
 public class OreNode : ICellBoolGiver, IExposable
 {
-    private BoolGrid boolGrid;
-
     public List<IntVec3> Cells;
-
-    private CellBoolDrawer drawer;
 
     private float OreAmount;
 
     public ThingDef ResourceDef;
 
     private IntVec3 Size;
+    private BoolGrid boolGrid;
 
     public OreNode(ThingDef thingDef, List<IntVec3> lumpCells, Map map)
     {
@@ -33,12 +30,9 @@ public class OreNode : ICellBoolGiver, IExposable
         ResourceDef = thingDef;
         Cells = lumpCells;
         Size = map.Size;
-        if (lumpCells != null)
+        if (lumpCells != null && thingDef != null)
         {
-            if (thingDef != null)
-            {
-                OreAmount = lumpCells.Count * (float)thingDef.deepCountPerCell / 10;
-            }
+            OreAmount = lumpCells.Count * (float)thingDef.deepCountPerCell / 10;
         }
 
         boolGrid = new BoolGrid(map);
@@ -55,9 +49,9 @@ public class OreNode : ICellBoolGiver, IExposable
     {
         get
         {
-            drawer ??= new CellBoolDrawer(this, Size.x, Size.z);
+            field ??= new CellBoolDrawer(this, Size.x, Size.z);
 
-            return drawer;
+            return field;
         }
     }
 

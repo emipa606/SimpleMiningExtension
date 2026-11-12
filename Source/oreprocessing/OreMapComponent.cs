@@ -47,12 +47,9 @@ public class OreMapComponent(Map map) : MapComponent(map)
         var thingDef = ResourceDefs.RandomElementByWeight(def => def.deepCommonality);
         var numCells = Mathf.CeilToInt(thingDef.deepLumpSizeRange.RandomInRange);
         var list = new List<IntVec3>();
-        foreach (var item in GridShapeMaker.IrregularLump(c, map, numCells))
+        foreach (var item in GridShapeMaker.IrregularLump(c, map, numCells).Where(cell => !cell.InNoBuildEdgeArea(map)))
         {
-            if (!item.InNoBuildEdgeArea(map))
-            {
-                list.Add(item);
-            }
+            list.Add(item);
         }
 
         Nodes.Add(new OreNode(thingDef, list, map));
